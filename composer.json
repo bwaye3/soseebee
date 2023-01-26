@@ -1,24 +1,23 @@
 {
-    "name": "pantheon-upstreams/drupal-composer-managed",
-    "description": "Install Drupal 9 with Composer on Pantheon.",
+    "name": "drupal/legacy-project",
+    "description": "Project template for Drupal 9 projects with composer following drupal/drupal layout",
     "type": "project",
-    "license": "MIT",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/drupal",
+    "support": {
+        "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
+        "chat": "https://www.drupal.org/node/314178"
+    },
     "repositories": [
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
-        },
-        {
-            "type": "path",
-            "url": "upstream-configuration"
         }
     ],
     "require": {
-        "pantheon-upstreams/upstream-configuration": "dev-main",
         "composer/installers": "^1.9",
         "drupal/core-composer-scaffold": "^9.2",
         "drupal/core-recommended": "^9.2",
-        "pantheon-systems/drupal-integrations": "^9",
         "cweagans/composer-patches": "^1.7",
         "drush/drush": "^11 || ^12",
         "drupal/admin_toolbar": "^3.3",
@@ -36,7 +35,9 @@
         "drupal/webform": "^6.1",
         "drupal/chosen": "^3.0",
         "drupal/jquery_ui_tabs": "^2.0",
-        "drupal/jquery_ui_tooltip": "^2.0"
+        "drupal/jquery_ui_tooltip": "^2.0",
+        "drupal/dropdown_language": "^3.1",
+        "drupal/honeypot": "^2.1"
     },
     "require-dev": {
         "drupal/core-dev": "^9.2"
@@ -51,12 +52,8 @@
             "locations": {
                 "web-root": "./web"
             },
-            "allowed-packages": [
-                "pantheon-systems/drupal-integrations"
-            ],
             "file-mapping": {
                 "[project-root]/.editorconfig": false,
-                "[project-root]/pantheon.upstream.yml": false,
                 "[project-root]/.gitattributes": false
             }
         },
@@ -97,11 +94,6 @@
             "drupal/core": "-p2"
         }
     },
-    "autoload": {
-        "classmap": [
-            "upstream-configuration/scripts/ComposerScripts.php"
-        ]
-    },
     "scripts": {
         "pre-update-cmd": [
             "DrupalComposerManaged\\ComposerScripts::preUpdate"
@@ -109,9 +101,6 @@
         "upstream-require": [
             "DrupalComposerManaged\\ComposerScripts::upstreamRequire"
         ]
-    },
-    "scripts-descriptions": {
-        "upstream-require": "Add a dependency to an upstream. See https://pantheon.io/docs/create-custom-upstream for information on creating custom upstreams."
     },
     "config": {
         "preferred-install": "dist",
