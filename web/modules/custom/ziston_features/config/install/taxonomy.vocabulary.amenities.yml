@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Listing Amenities'
+vid: amenities
+description: ''
+weight: 0

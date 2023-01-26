@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.listing_content
+  module:
+    - gaviasthemer
+    - views
+  theme:
+    - ziston_sub
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: exposed_content_listing_filter_form
+theme: ziston_sub
+region: other
+weight: -12
+provider: null
+plugin: 'views_exposed_filter_block:listing_content-listing_filter_form'
+settings:
+  id: 'views_exposed_filter_block:listing_content-listing_filter_form'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+visibility: {  }

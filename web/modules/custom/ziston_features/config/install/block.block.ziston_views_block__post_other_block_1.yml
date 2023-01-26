@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.post_other
+  module:
+    - gaviasthemer
+    - system
+    - views
+  theme:
+    - ziston
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: ziston_views_block__post_other_block_1
+theme: ziston
+region: sidebar_right
+weight: 0
+provider: null
+plugin: 'views_block:post_other-block_1'
+settings:
+  id: 'views_block:post_other-block_1'
+  label: 'Recent Posts'
+  label_display: visible
+  provider: views
+  views_label: 'Recent Posts'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/services\r\n/services-2\r\n/services-3\r\n/blogs-masonry\r\n/blogs-grid\r\n/portfolio\r\n/portfolio-1\r\n/portfolio-2\r\n/portfolio-3\r\n/portfolio-4"

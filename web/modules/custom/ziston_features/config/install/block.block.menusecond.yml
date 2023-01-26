@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-second
+  module:
+    - gaviasthemer
+    - system
+  theme:
+    - ziston_sub
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: menusecond
+theme: ziston_sub
+region: sidebar_right
+weight: 0
+provider: null
+plugin: 'system_menu_block:menu-second'
+settings:
+  id: 'system_menu_block:menu-second'
+  label: 'Menu second'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/our-awards\r\n/partners\r\n/careers"

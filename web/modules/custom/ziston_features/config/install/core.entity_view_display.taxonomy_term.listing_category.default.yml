@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.listing_category.field_listing_category_color
+    - field.field.taxonomy_term.listing_category.field_listing_category_icon
+    - taxonomy.vocabulary.listing_category
+  module:
+    - text
+id: taxonomy_term.listing_category.default
+targetEntityType: taxonomy_term
+bundle: listing_category
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_listing_category_color: true
+  field_listing_category_icon: true
+  langcode: true

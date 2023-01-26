@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Listing Category'
+vid: listing_category
+description: ''
+weight: 0

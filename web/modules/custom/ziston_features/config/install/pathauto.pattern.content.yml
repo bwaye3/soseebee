@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: content
+label: Content
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  351cf6ad-7481-4df4-a58c-1fae0722b9a9:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 351cf6ad-7481-4df4-a58c-1fae0722b9a9
+    context_mapping:
+      node: node
+    bundles:
+      article: article
+      banner: banner
+      event: event
+      gallery: gallery
+      listing: listing
+      page: page
+      portfolio: portfolio
+      team: team
+      testimonial: testimonial
+selection_logic: and
+weight: -5
+relationships: {  }

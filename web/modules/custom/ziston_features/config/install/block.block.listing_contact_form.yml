@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.request_call_back
+  module:
+    - gaviasthemer
+    - webform
+  theme:
+    - ziston_sub
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: listing_contact_form
+theme: ziston_sub
+region: listing_sidebar
+weight: 0
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: 'Listing Contact Form'
+  label_display: visible
+  provider: webform
+  webform_id: request_call_back
+  default_data: ''
+  redirect: false
+visibility: {  }
