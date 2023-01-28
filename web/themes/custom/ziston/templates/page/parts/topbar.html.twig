@@ -6,17 +6,17 @@
                <div class="content-inner">
                   {{ page.topbar }}
                </div>
-            </div>   
-            
+            </div>
+
             <div class="topbar-right {% if page.language %} has-language-block{% endif %}">
                <div class="content-inner">
-                  
+
                   {% if page.search %}
                      <div class="gva-search-region search-region">
                         <span class="icon"><i class="fi flaticon-magnifying-glass"></i></span>
-                        <div class="search-content">  
+                        <div class="search-content">
                            {{ page.search }}
-                        </div>  
+                        </div>
                      </div>
                   {% endif %}
 
@@ -24,35 +24,35 @@
                      <span class="icon">
                         {% if user_picture %}
                            <img src="{{ file_url(user_picture) }}" alt=""/>
-                        {% else %}  
+                        {% else %}
                            <i class="fa fa-user"></i>
                         {% endif %}
                      </span>
-                     <div class="user-content">  
+                     <div class="user-content">
                         {% if custom_account %}
                            <div class="account-message">{{ custom_account|raw }}</div>
-                        {% endif %}  
+                        {% endif %}
                        <ul class="user-links">
                            {% if custom_account %}
-                              <li><a href="{{ base_url }}{{ header_button_link }} ">{{'+ Add Listing'|t}}</a></li>
-                              <li><a href="{{ path('user.page') }}">{{ '+ My Account'|t }}</a></li>
+                             {#<li><a href="{{ base_url }}{{ header_button_link }} ">{{'+ Add Listing'|t}}</a></li>#}
+                             {# <li><a href="{{ path('user.page') }}">{{ '+ My Account'|t }}</a></li>#}
                               <li><a href="{{ path('user.logout') }}">{{ '+ Logout'|t }}</a></li>
                            {% else %}
                               <li><a href="{{ path('user.login') }}">{{ '+ Login'|t }}</a></li>
-                              <li><a href="{{ path('user.register') }}">{{ '+ Register'|t }}</a></li>
-                           {% endif %}  
+                             {#  <li><a href="{{ path('user.register') }}">{{ '+ Register'|t }}</a></li>#}
+                           {% endif %}
                        </ul>
-                     </div>  
+                     </div>
                   </div>
 
                   {% if page.language %}
                      <div class="language-region">{{ page.language }}</div>
                   {% endif %}
 
-               </div>  
+               </div>
             </div>
-         </div>   
+         </div>
 
-      </div>      
+      </div>
    </div>
 {% endif %}
