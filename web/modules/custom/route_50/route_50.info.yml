@@ -2,8 +2,8 @@ name: Ride To Rescue 50km
 type: module
 description: 'Ride To Rescue 50km'
 package: Custom
-version: 8.x
-core_version_requirement: ^8 || ^9
+version: 9.x
+core_version_requirement: ^8 || ^9 || ^10
 dependencies:
   - node
   - block
