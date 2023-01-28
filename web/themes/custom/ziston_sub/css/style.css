@@ -1,1 +1,73 @@
 /* Custom Style Sheet */
+.topbar .topbar-wrapper .topbar-content {
+  color: #24150b;
+}
+
+ul.user-links:nth-child(2) {
+  display: none !important;
+}
+
+.daylight {
+  font-size: 12px;
+}
+
+.topbar .topbar-wrapper .topbar-content p {
+  margin-top: 2px;
+  margin-bottom: 0;
+  margin-left: 20px;
+  font-size: 13px;
+}
+
+.member-area .gbb-row .bb-inner {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+div#edit-more-links,
+div#block-userlogin ul {
+  display: none !important;
+}
+
+.button:not(.register-button), .btn, .btn-white, .btn-theme, .btn-theme-second, .btn-black, .more-link a, .btn-theme-submit {
+  background: #649c1a;
+}
+
+#user-login-form .form-item:not(.js-form-type-checkbox) label, #user-register-form .form-item:not(.js-form-type-checkbox) label {
+  color: #fff;
+}
+
+.menu-bar {
+  right: 0;
+}
+
+.large {
+  font-size: 18px !important
+}
+.white {
+  color: white !important
+}
+.bold {
+  font-weight: bold !important
+}
+header .site-branding-logo {
+  max-width: 200px !important;
+}
+.header-default .header-main .header-content-inner .branding .site-branding-logo img {
+  max-width: 200px !important;
+}
+.text-dark {
+  color: #000 !important;
+}
+
+.topbar {
+  background: #9acd56;
+  color: #24150b;
+}
+
+.topbar .topbar-wrapper .topbar-content a {
+  color: #24150b;
+}
+
+.header-default .header-main .header-content-inner .header-inner .header-button a {
+  display: none !important;
+}
