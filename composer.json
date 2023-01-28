@@ -28,6 +28,7 @@
         "drupal/features": "^3.12",
         "drupal/google_map_field": "^1.14",
         "drupal/honeypot": "^2.1",
+        "drupal/iframe": "^2.21",
         "drupal/imce": "^3.0",
         "drupal/jquery_ui": "^1.6",
         "drupal/jquery_ui_tabs": "^2.0",

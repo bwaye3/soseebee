@@ -3,7 +3,7 @@
         'name' => 'drupal/legacy-project',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '96ca9b715089f86832758a8a632f02ca52135353',
+        'reference' => '1d61f3937df6fb6a22c2e3054a2105874df3e4e6',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -439,6 +439,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'drupal/iframe' => array(
+            'pretty_version' => '2.21.0',
+            'version' => '2.21.0.0',
+            'reference' => '8.x-2.21',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/iframe',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'drupal/imce' => array(
             'pretty_version' => '3.0.6',
             'version' => '3.0.6.0',
@@ -505,7 +514,7 @@
         'drupal/legacy-project' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '96ca9b715089f86832758a8a632f02ca52135353',
+            'reference' => '1d61f3937df6fb6a22c2e3054a2105874df3e4e6',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
