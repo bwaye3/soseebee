@@ -5,8 +5,6 @@ deployment:
     - /bin/cp -R * $DEPLOYPATH
     -
 ######################
-
-
 #deployment:
 #tasks:
 #  - export DEPLOYPATH=PATH=/home/sosebee/drupal  # Add /<app_folder> if required
