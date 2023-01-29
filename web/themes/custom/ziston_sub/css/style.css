@@ -88,3 +88,10 @@ header .site-branding-logo {
   padding: 100px 0 80px;
   margin-top: 80px !important;
 }
+
+.member-login {
+  display: inline-flex;
+  position: absolute;
+  right: 50px;
+  top: 8px;
+}

@@ -5,7 +5,7 @@
 	{% set class_sticky = '' %}
 	{% if sticky_menu == 1 %}
 		{% set class_sticky = 'gv-sticky-menu' %}
-	{% endif %}  
+	{% endif %}
 
   	<div class="header-main {{ class_sticky }}">
 	 	<div class="container header-content-layout">
@@ -20,7 +20,7 @@
 					{% set class_main_menu = '' %}
 					{% if hide_header_button_link != 'hide' %}
 						{% set class_main_menu = ' has-header-button' %}
-					{% endif %}  
+					{% endif %}
 
 					<div class="header-inner clearfix">
 						<div class="main-menu{{ class_main_menu }}">
@@ -40,7 +40,7 @@
 											</div>
 										{% endif %}
 									</div>
-								
+
 									<div id="menu-bar" class="menu-bar menu-bar-mobile d-xl-none">
 										<span class="one"></span>
 										<span class="two"></span>
@@ -48,18 +48,18 @@
 									</div>
 
 									{% if hide_header_button_link != 'hide' %}
+
 										<div class="header-button">
-											{% if custom_account %}
-												<a href="{{ base_url }}{{ header_button_link }} ">{{ header_button_text }}</a>
+											{% if custom_account %}<a href="{{ base_url }}{{ header_button_link }} ">{{ header_button_text }}</a>
 											{% else %}
-												<a href="{{ path('user.login') }}">{{ header_button_text }}</a>
+                        <a href="{{ path('user.login') }}">{{ header_button_text }}</a>
 											{% endif %}
 										</div>
-									{% endif %} 
+									{% endif %}
 								</div>
 							</div>
-						</div>  
-					</div> 
+						</div>
+					</div>
 				</div>
 			</div>
 	 	</div>

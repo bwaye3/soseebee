@@ -21,24 +21,28 @@
                   {% endif %}
 
                   <div class="gva-user-region user-region">
+                    <p class="member-login">Members Login</p>
                      <span class="icon">
+
                         {% if user_picture %}
-                           <img src="{{ file_url(user_picture) }}" alt=""/>
+                          <img src="{{ file_url(user_picture) }}" alt=""/>
                         {% else %}
-                           <i class="fa fa-user"></i>
+
+                         <i class="fa fa-user"></i>
                         {% endif %}
                      </span>
                      <div class="user-content">
                         {% if custom_account %}
                            <div class="account-message">{{ custom_account|raw }}</div>
                         {% endif %}
+
                        <ul class="user-links">
                            {% if custom_account %}
                              {#<li><a href="{{ base_url }}{{ header_button_link }} ">{{'+ Add Listing'|t}}</a></li>#}
                              {# <li><a href="{{ path('user.page') }}">{{ '+ My Account'|t }}</a></li>#}
                               <li><a href="{{ path('user.logout') }}">{{ '+ Logout'|t }}</a></li>
                            {% else %}
-                              <li><a href="{{ path('user.login') }}">{{ '+ Login'|t }}</a></li>
+                              <li><a href="{{ path('user.login') }}">{{ '+ Member Login'|t }}</a></li>
                              {#  <li><a href="{{ path('user.register') }}">{{ '+ Register'|t }}</a></li>#}
                            {% endif %}
                        </ul>
