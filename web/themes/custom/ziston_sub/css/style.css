@@ -1,4 +1,3 @@
-/* Custom Style Sheet */
 .topbar .topbar-wrapper .topbar-content {
   color: #24150b;
 }
@@ -46,7 +45,7 @@ div#block-userlogin ul {
 .white {
   color: white !important
 }
-.bold {
+.bold{
   font-weight: bold !important
 }
 header .site-branding-logo {
@@ -56,7 +55,7 @@ header .site-branding-logo {
   max-width: 200px !important;
 }
 .text-dark {
-  color: #000 !important;
+  color: #000000 !important;
 }
 
 .topbar {
@@ -70,4 +69,22 @@ header .site-branding-logo {
 
 .header-default .header-main .header-content-inner .header-inner .header-button a {
   display: none !important;
+}
+
+.logged-in .gsc-button.medium {
+  background: #9acd56;
+  border: 2px solid #472511;
+}
+
+.button:not(.register-button), .btn, .btn-white, .btn-theme, .btn-theme-second, .btn-black, .more-link a, .btn-theme-submit {
+  background: #4b2c17;
+}
+
+.view-content-wrap a {
+  color: #fff;
+}
+
+#footer .footer-center {
+  padding: 100px 0 80px;
+  margin-top: 80px !important;
 }
