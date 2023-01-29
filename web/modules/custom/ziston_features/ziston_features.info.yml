@@ -14,7 +14,6 @@ dependencies:
   - file
   - gavias_view
   - gaviasthemer
-  - google_map_field
   - image
   - imce
   - mailchimp_signup
