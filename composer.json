@@ -33,6 +33,7 @@
         "drupal/jquery_ui_tooltip": "^2.0",
         "drupal/mailchimp": "^2.0",
         "drupal/pathauto": "^1.11",
+        "drupal/redirect_after_login": "^2.7",
         "drupal/token": "^1.11",
         "drupal/upgrade_status": "^4.0@alpha",
         "drupal/views_infinite_scroll": "^2.0",
