@@ -26,6 +26,7 @@
         "drupal/core-recommended": "^9.2",
         "drupal/ctools": "^4.0",
         "drupal/features": "^3.12",
+        "drupal/group": "^1.5",
         "drupal/honeypot": "^2.1",
         "drupal/iframe": "^2.21",
         "drupal/imce": "^3.0",
