@@ -21,6 +21,7 @@
         "drupal/better_exposed_filters": "^6.0",
         "drupal/chosen": "^3.0",
         "drupal/config_update": "^1.7",
+        "drupal/content_access": "^1.0@alpha",
         "drupal/core-composer-scaffold": "^9.2",
         "drupal/core-recommended": "^9.2",
         "drupal/ctools": "^4.0",
