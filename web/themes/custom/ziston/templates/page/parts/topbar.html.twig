@@ -21,7 +21,7 @@
                   {% endif %}
 
                   <div class="gva-user-region user-region">
-                    <p class="member-login">Members Login</p>
+                    <p class="member-login"><a href="{{ path('user.login') }}">{{ '+ Member Login'|t }}</a></p>
                      <span class="icon">
 
                         {% if user_picture %}
