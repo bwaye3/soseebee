@@ -115,8 +115,6 @@ class ComposerStaticInit5f33856b7727b4ccef3732189f51a2fa
         array (
             'MathieuViossat\\Util\\' => 20,
             'Masterminds\\' => 12,
-            'Mailchimp\\http\\' => 15,
-            'Mailchimp\\' => 10,
         ),
         'L' => 
         array (
@@ -364,14 +362,6 @@ class ComposerStaticInit5f33856b7727b4ccef3732189f51a2fa
         'Masterminds\\' => 
         array (
             0 => __DIR__ . '/..' . '/masterminds/html5/src',
-        ),
-        'Mailchimp\\http\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/thinkshout/mailchimp-api-php/src/http',
-        ),
-        'Mailchimp\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/thinkshout/mailchimp-api-php/src',
         ),
         'League\\Container\\' => 
         array (
