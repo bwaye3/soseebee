@@ -34,16 +34,16 @@
     
     <fieldset class="fieldset-wrapper g-wrapper">
     <div class="gavias-heading">Layer Style Setting</div>
-    <table>
+    <table style="padding: 10px 20px 20px;">
       <tr>
-        <td width="60%">
+        <td width="40%">
           <div class="g-label">Layer style</div> 
          <select class="select-content-type layer-option" name="select_content_type">
             <option value="text">Text</option>
             <option value="image">Image</option>
           </select>
         </td>
-        <td width="40%">
+        <td width="50%">
           <div class="g-label">Title</div> 
           <div>
             <input type="text" name="title" class="form-text layer-option"/>
@@ -54,75 +54,72 @@
 
       <tr>
         <td colspan="3">
-          <div id="content-type">
-            <div id="content-text" class="g-content-setting">
-                <table>
-                  <tr>
-                    <td width="60%">
-                      
-                      <div class="">
-                        <div style="float: left; width: 36%; display: none;">
-                          <div class="g-label">Text style</div> 
-                          <?php print gavias_defined_select('text_style', gavias_sliderlayer_captionclasses(),'layer-option'); ?>
-                        </div>
-                        <div style="float: left; width: 15%;">
-                          <div class="g-label" style="margin-top: 10px;">Font Size (px)</div>
-                          <div class="g-input">
-                            <input type="number" name="font_size_lg" placeholder="Large Screen" class="form-text layer-option option-responsive option-lg"/>
-                            <input type="number" name="font_size_sm" placeholder="Medium Screen" class="form-text layer-option option-responsive option-sm"/>
-                            <input type="number" name="font_size_xs" placeholder="Small Screen" class="form-text layer-option option-responsive option-xs"/>
-                          </div>
-                        </div>  
-                        <div style="float: left; width: 15%;">
-                          <div class="g-label" style="margin-top: 10px;">Line Height (px)</div>
-                          <div class="g-input">
-                            <input type="number" name="line_height_lg" placeholder="Large Screen" class="form-text layer-option option-responsive option-lg"/>
-                            <input type="number" name="line_height_sm" placeholder="Medium Screen" class="form-text layer-option option-responsive option-sm" />
-                            <input type="number" name="line_height_xs" placeholder="Small Screen" class="form-text layer-option option-responsive option-xs" />
-                          </div>
-                        </div>  
-                        <div style="float: left; width: 15%;">
-                          <div class="g-label" style="margin-top: 10px;">Align</div>
-                          <div class="g-input">
-                            <select name="text_align_lg" class="form-text layer-option option-responsive option-lg">
-                              <option value="left">Left</option>
-                              <option value="right">Right</option>
-                              <option value="center">Center</option>
-                            </select>
-                            <select name="text_align_sm" class="form-text layer-option option-responsive option-sm">
-                              <option value="left">Left</option>
-                              <option value="right">Right</option>
-                              <option value="center">Center</option>
-                            </select>
-                            <select name="text_align_xs" class="form-text layer-option option-responsive option-xs">
-                              <option value="left">Left</option>
-                              <option value="right">Right</option>
-                              <option value="center">Center</option>
-                            </select>
-                          </div>
-                        </div>  
-                        <div style="float: left; width: 15%;">
-                          <div class="g-label" style="margin-top: 10px;">Color</div>
-                          <div class="g-input">
-                            <input type="text" name="color_lg" placeholder="#fff" class="color-picker form-text layer-option option-responsive option-lg" readonly="true" />
-                            <input type="text" name="color_sm" placeholder="#fff" class="color-picker form-text layer-option option-responsive option-sm" readonly="true"/>
-                            <input type="text" name="color_xs" placeholder="#fff" readonly="true" class="color-picker form-text layer-option option-responsive option-xs" readonly="true"/>
-                          </div>
-                        </div>  
+          <div id="content-type" style="margin-top: 20px;">
+            <div id="content-text" class="g-content-setting" style="border: none; padding-top: 20px;border-top: 1px solid #ccc;">
+              <div style="width: 50%; float:left;">
+                <div style="float: left; width: 36%; display: none;">
+                  <div class="g-label">Text style</div> 
+                  <?php print gavias_defined_select('text_style', gavias_sliderlayer_captionclasses(),'layer-option'); ?>
+                </div>
 
-                      </div>  
-                    </td>
+                <div style="float: left; width: 24%;margin-right: 1%;">
+                  <div class="g-label" style="margin-top: 10px;">Font Size (px)</div>
+                  <div class="g-input">
+                    <input type="number" name="font_size_lg" placeholder="Large Screen" class="form-text layer-option option-responsive option-lg"/>
+                    <input type="number" name="font_size_sm" placeholder="Medium Screen" class="form-text layer-option option-responsive option-sm"/>
+                    <input type="number" name="font_size_xs" placeholder="Small Screen" class="form-text layer-option option-responsive option-xs"/>
+                  </div>
+                </div>  
 
-                    <td width="40%">
-                      <textarea class="layer-option form-textarea" rows="5" name="text" id="layer-text" style="height: 80px;"></textarea>
-                    </td>
-                  </tr>
-                </table>
+                <div style="float: left; width: 24%;margin-right: 1%;">
+                  <div class="g-label" style="margin-top: 10px;">Line Height (px)</div>
+                  <div class="g-input">
+                    <input type="number" name="line_height_lg" placeholder="Large Screen" class="form-text layer-option option-responsive option-lg"/>
+                    <input type="number" name="line_height_sm" placeholder="Medium Screen" class="form-text layer-option option-responsive option-sm" />
+                    <input type="number" name="line_height_xs" placeholder="Small Screen" class="form-text layer-option option-responsive option-xs" />
+                  </div>
+                </div> 
+
+                <div style="float: left; width: 24%;margin-right: 1%;">
+                  <div class="g-label" style="margin-top: 10px;">Align</div>
+                  <div class="g-input">
+                    <select name="text_align_lg" class="form-text layer-option option-responsive option-lg">
+                      <option value="left">Left</option>
+                      <option value="right">Right</option>
+                      <option value="center">Center</option>
+                    </select>
+                    <select name="text_align_sm" class="form-text layer-option option-responsive option-sm">
+                      <option value="left">Left</option>
+                      <option value="right">Right</option>
+                      <option value="center">Center</option>
+                    </select>
+                    <select name="text_align_xs" class="form-text layer-option option-responsive option-xs">
+                      <option value="left">Left</option>
+                      <option value="right">Right</option>
+                      <option value="center">Center</option>
+                    </select>
+                  </div>
+                </div> 
+
+                <div style="float: left; width: 24%;">
+                  <div class="g-label" style="margin-top: 10px;">Color</div>
+                  <div class="g-input">
+                    <input type="text" name="color_lg" placeholder="#fff" class="color-picker form-text layer-option option-responsive option-lg" readonly="true" />
+                    <input type="text" name="color_sm" placeholder="#fff" class="color-picker form-text layer-option option-responsive option-sm" readonly="true"/>
+                    <input type="text" name="color_xs" placeholder="#fff" readonly="true" class="color-picker form-text layer-option option-responsive option-xs" readonly="true"/>
+                  </div>
+                </div>  
+
+              </div>  
+
+              <div style="width: 50%;float: left;">
+                <textarea class="layer-option form-textarea" rows="5" name="text" id="layer-text" style="height: 100px; font-size: 14px;"></textarea>
+              </div>
+
             </div>
 
             <div id="content-image" class="g-content-setting filed-upload-layer-content" style="display: none;">
               <?php print gavias_sliderlayer_field_upload_layer(); ?>
-              
             </div>
 
           </div> 
@@ -134,10 +131,10 @@
 
     <fieldset class="fieldset-wrapper g-wrapper">
       <div class="gavias-heading">Layer Setting</div>
-      <table>
+      <table style="padding: 10px 20px 20px 20px;">
         <tr>
-          <td width="60%" colspan="2">
-            <div style="float: left; width: 32%;">
+          <td width="65%">
+            <div style="float: left; width: 33%;">
               <div class="g-label">Top</div>
               <div class="g-input">
                 <input type="text" name="top" placeholder="Large" class="form-text layer-option option-responsive option-lg"/>
@@ -154,18 +151,18 @@
               </div>
 
             </div>  
-            <div style="float: left; width: 32%">
+            <div style="float: left; width: 33%;">
               <div class="g-label small">Link</div> 
               <input type="text" name="link" class="form-text layer-option">
             </div>
-            <div style="float: left; width: 32%">
+            <div style="float: left; width: 33%;">
               <div class="g-label">Custom class</div> 
               <input type="text" name="custom_class" class="form-text layer-option"/>
             </div>  
             <?php if(gavias_sliderlayer_styles()){ 
               $styles = gavias_sliderlayer_styles(); 
             ?>
-              <div style="float: left; width: 32%">
+              <div style="float: left; width: 33%;">
                 <div class="g-label">Styles available </div> 
                 <select name="custom_style" class="layer-option">
                     <?php foreach ($styles as $key => $value) { ?>
@@ -174,7 +171,7 @@
                 </select>
               </div>
             <?php } ?>
-            <div style="float: left; width: 32%">
+            <div style="float: left; width: 33%;">
                 <div class="g-label">Width Layer (Image)</div> 
                 <input name="width" type="text" class="form-text layer-option option-responsive option-lg" />
                 <input name="width_sm" type="text" class="form-text layer-option option-responsive option-sm" />
@@ -185,7 +182,7 @@
                 <input name="height_xs" type="hidden" class="form-text layer-option option-responsive option-xs" />
             </div>    
           </td>
-          <td width="40%">
+          <td width="35%">
             <div class="g-label">Custom css</div> 
             <textarea name="custom_css" class="form-textarea layer-option" style="height:100px;"></textarea>
           </td>
@@ -198,21 +195,21 @@
     <fieldset class="form-wrapper g-wrapper">
       <div class="gavias-heading">Layer Transition Effects</div>
 
-      <table>
+      <table style="padding: 10px 20px 20px;">
         <tr>
           <td colspan="3">
-            <div class="margin-tb-20 margin-bottom-50" style="float: left; width: 75%;">
+            <div style="float: left; width: 75%;margin-bottom: 35px;">
               <div class="g-label" style="margin-bottom: 10px;">Data Time (Start - End)</div>
               <div id="g-slider"></div>
             </div>  
-            <div style="float: right; width: 20%;margin-top:55px;">
+            <div style="float: right; width: 20%;margin-top:25px;">
               <input name="data_time_start" id="g_data_start" class="layer-option" type="text" style="width: 40%!important;" />
               <input name="data_time_end" id="g_data_end" class="layer-option" type="text" style="width: 40%!important;" />
             </div>
           </td>
         </tr>
         <tr>
-          <td width="25%">
+          <td width="30%">
           <div class="g-label">Incoming Effect</div>
             <select name="incomingclasses" class="layer-option">
               <?php foreach (gaviasGetArrAnimations() as $key => $value) { ?>
@@ -224,7 +221,7 @@
             <div class="g-label">Easing</div>
             <div><?php print gavias_defined_select('data_easing', gavias_sliderlayer_dataeasing(),'layer-option'); ?></div>
           </td>
-          <td  width="25%">
+          <td  width="30%">
             <div class="g-label">Speed Start</div>
             <input type="text" name="data_speed" class="layer-option form-text range-slider-single"/>
           </td>
@@ -243,7 +240,7 @@
             <div class="g-label">End Easing</div>
             <?php print gavias_defined_select('data_endeasing', gavias_sliderlayer_dataendeasing(),'layer-option'); ?>
           </td>
-          <td width="25%">
+          <td width="30%">
             <div> 
               <div class="g-label"> Speed End</div>
               <input type="text" name="data_end" class="layer-option form-text range-slider-single"/>

@@ -18,13 +18,13 @@ function gavias_sliderlayer_block_content($sid) {
   $ss->gridwidth_2 = isset($settings->gridwidth) ? '[' . (int)$settings->gridwidth . ']' : '[1170]';
   $ss->gridheight = $gridheight;
   $ss->reponsive = false;
-  $ss->responsiveLevels = "[1240,1240,778,778]";
+  $ss->responsiveLevels = "[1240,1024,778,778]";
   if($gridheight_sm || $gridheight_xs){
     if(!$gridheight_sm) $gridheight_sm = $gridheight;
-    if($gridheight_xs) $ss->responsiveLevels = '[1240,1240,778,480]';
+    if($gridheight_xs) $ss->responsiveLevels = '[1240,1024,778,480]';
     if(!$gridheight_xs) $gridheight_xs = $gridheight_sm;
-    $ss->gridheight = $ss->gridheight_2 = "[{$gridheight},{$gridheight},{$gridheight_sm},$gridheight_sm]";
-    $ss->gridwidth = $ss->gridwidth_2 = '[1170,1170,778,480]';
+    $ss->gridheight = $ss->gridheight_2 = "[{$gridheight},{$gridheight_sm},{$gridheight_sm},{$gridheight_xs}]";
+    $ss->gridwidth = $ss->gridwidth_2 = '[1170,1024,778,480]';
     $ss->reponsive = true;
   }
 
@@ -308,7 +308,7 @@ function gavias_sliderlayer_layer($vars, $layer_count, $slider_id){
   if($gridheight_sm || $gridheight_xs || $left_sm || $left_xs){
     if(!$left_xs) $left_xs = $left_sm;
     if(!$left_sm & !$left_xs) $left_sm = $left_xs = $layer->left;
-    $data_x = "['{$layer->left}','{$layer->left}','{$left_sm}','{$left_xs}']";
+    $data_x = "['{$layer->left}','{$layer->left_sm}','{$left_sm}','{$left_xs}']";
     $vars['attributes_array']['data-x'] = $data_x;
   }
 
@@ -319,7 +319,7 @@ function gavias_sliderlayer_layer($vars, $layer_count, $slider_id){
   if($gridheight_sm || $gridheight_xs || $top_sm || $top_xs){
     if(!$top_xs && is_numeric($top_sm)) $top_xs = round($top_sm);
     if(!$top_sm & !$top_xs) $top_sm = $top_xs = round($layer->top);
-    $data_y = "['{$layer->top}', '{$layer->top}', '{$top_sm}', '{$top_xs}']";
+    $data_y = "['{$layer->top}', '{$top_sm}', '{$top_sm}', '{$top_xs}']";
     $vars['attributes_array']['data-y'] = $data_y;
   }
 
@@ -334,7 +334,7 @@ function gavias_sliderlayer_layer($vars, $layer_count, $slider_id){
   if(!$font_size_sm) $font_size_sm = $font_size_lg;
   if(!$font_size_xs) $font_size_xs = $font_size_sm;
   if(($gridheight_sm || $gridheight_xs) && $font_size_lg){
-    $data_font_size = "['{$font_size_lg}','{$font_size_lg}','{$font_size_sm}','{$font_size_xs}']";
+    $data_font_size = "['{$font_size_lg}','{$font_size_sm}','{$font_size_sm}','{$font_size_xs}']";
   }
   if($data_font_size) $vars['attributes_array']['data-fontsize'] = $data_font_size;
 
@@ -345,7 +345,7 @@ function gavias_sliderlayer_layer($vars, $layer_count, $slider_id){
   if(!$line_height_sm) $line_height_sm = $line_height_lg;
   if(!$line_height_xs) $line_height_xs = $line_height_sm;
   if(($gridheight_sm || $gridheight_xs) && ($line_height_lg)){
-     $data_line_height = "['{$line_height_lg}','{$line_height_lg}','{$line_height_sm}','{$line_height_xs}']";
+     $data_line_height = "['{$line_height_lg}','{$line_height_sm}','{$line_height_sm}','{$line_height_xs}']";
   }
   if($data_line_height) $vars['attributes_array']['data-lineheight'] = $data_line_height; 
 
@@ -365,7 +365,7 @@ function gavias_sliderlayer_layer($vars, $layer_count, $slider_id){
     $data_color = "['{$color_lg}','{$color_lg}','{$color_lg}','{$color_lg}']";
   }
   if(($gridheight_sm || $gridheight_xs) && $color_lg){
-     $data_color = "['{$color_lg}','{$color_lg}','{$color_sm}','{$color_xs}']";
+     $data_color = "['{$color_lg}','{$color_sm}','{$color_sm}','{$color_xs}']";
   }
   if($data_color) $vars['attributes_array']['data-color'] = $data_color; 
 
@@ -378,7 +378,7 @@ function gavias_sliderlayer_layer($vars, $layer_count, $slider_id){
   if(($gridheight_sm || $gridheight_xs) && $text_align_lg){
     if(!$text_align_sm) $text_align_sm = $text_align_lg;
     if(!$text_align_xs) $text_align_xs = $text_align_sm;
-     $data_line_height = "['{$text_align_lg}','{$text_align_lg}','{$text_align_sm}','{$text_align_xs}']";
+     $data_line_height = "['{$text_align_lg}','{$text_align_sm}','{$text_align_sm}','{$text_align_xs}']";
   }
   if($data_text_align) $vars['attributes_array']['data-textalign'] = $data_text_align; 
 
@@ -444,7 +444,7 @@ function gavias_sliderlayer_layer($vars, $layer_count, $slider_id){
 
   if($mask_out) $frames[1]['mask'] = $mask_out;
 
-  if( ($layer->data_time_end + 20) < $settings_delay && ((int)$layer->data_time_end > (int)$layer->data_time_start)){
+  if( ((int)$layer->data_time_end + 20) < $settings_delay && ((int)$layer->data_time_end > (int)$layer->data_time_start)){
     $vars['attributes_array']['data-end'] = round($layer->data_time_end);
      $frames[1]['delay'] = round($layer->data_time_end);
   }  

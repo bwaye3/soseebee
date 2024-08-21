@@ -1451,6 +1451,7 @@ ul.swith-language > li > a.active {
   background: #F0F0F0;
   color: #000;
   font-weight: 700;
+  text-decoration: none;
 }
 .gpb_col > .gpb_action-button a.gpb_add-element {
   background: #0075BE;
@@ -1561,11 +1562,13 @@ ul.swith-language > li > a.active {
   display: block;
   width: 100%;
   font-weight: 700;
+  font-size: 15px;
 }
 .gpb_el-content-inner .gpb_element-inner .element-item span.desc {
   display: block;
   width: 100%;
-  color: #000;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 14px;
 }
 .gpb_el-content-inner .gpb_element-inner .element-item span.desc span:last-child .space {
   display: none;
@@ -1627,12 +1630,17 @@ ul.swith-language > li > a.active {
 #gpb_form-edit-configs .form-group {
   margin-top: 20px;
 }
+#gpb_form-edit-configs .form-group textarea{
+  min-height: 210px;
+}
 #gpb_form-edit-configs .form-group p.desc {
   margin: 2px !important;
-  font-style: italic;
+  font-size: 13px;
+  color: #7c7c7c;
 }
 #gpb_form-edit-configs .form-label {
-  font-weight: 700;
+  font-weight: 500;
+  font-size: 14px;
 }
 #gpb_form-edit-configs input[type="text"],
 #gpb_form-edit-configs input[type="tel"],
@@ -1644,18 +1652,19 @@ ul.swith-language > li > a.active {
   -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.02) inset;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.02) inset;
   border: 1px solid #ccc;
-  padding: 5px 0;
+  padding: 6px;
   width: 100%;
-  padding: 5px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   line-height: 25px;
+  font-size: 14px;
+  height: 38px;
 }
 
 .gpb-elements-list {
   background: #fff;
-  max-width: 900px;
+  max-width: 980px;
   margin: 0 auto;
   border-radius: 6px;
   position: relative;
@@ -1689,7 +1698,7 @@ ul.swith-language > li > a.active {
 
 .edit-form-content {
   max-width: 992px;
-  margin: 150px auto 50px;
+  margin: 150px auto 80px;
   background: #fff;
   padding: 20px;
   position: relative;
@@ -1722,6 +1731,7 @@ ul.swith-language > li > a.active {
   position: absolute;
   top: -22px;
   right: 100px;
+  font-size: 14px;
 }
 .gva-upload-input .image-preview-wrapper{
   position: absolute;
@@ -1858,12 +1868,38 @@ ul.swith-language > li > a.active {
  .node-form[data-drupal-form-fields*="edit-gva-pagebuilder-content-0-value"].node-main-full .layout-region--node-main{width: 100%!important;}
  .node-form[data-drupal-form-fields*="edit-gva-pagebuilder-content-0-value"].node-main-full .layout-region--node-main .layout-region__content{max-width: 100%!important;}
 
+ .node-form[data-drupal-form-fields*="edit-gva-pagebuilder-content-0-value"].node-main-full > .layout-node-form{width: 100%!important; display: block!important;}
+
+
   .node-form[data-drupal-form-fields*="edit-gva-pagebuilder-content-0-value"].node-main-full .layout-region-node-secondary{display: none!important;}
   .node-form[data-drupal-form-fields*="edit-gva-pagebuilder-content-0-value"].node-main-full .layout-region--node-secondary{display: none!important;}
-
+  .node-form[data-drupal-form-fields*="edit-gva-pagebuilder-content-0-value"]  .layout-region--node-main .layout-region__content{width: 100%; max-width: 100%; padding-left: 15px; padding-right: 15px;}
+  .node-form[data-drupal-form-fields*="edit-gva-pagebuilder-content-0-value"]  .layout-region--node-main {width: 100%; max-width: 100%; padding-left: 15px; padding-right: 15px;}
+ /*
   .page-node-type-page .node-form[data-drupal-form-fields*="edit-gva-pagebuilder-content-0-value"]  .layout-region--node-main .layout-region__content{max-width: 100%; padding-left: 15px; padding-right: 15px;}
+ 
+  .page-node-type-service .node-form[data-drupal-form-fields*="edit-gva-pagebuilder-content-0-value"]  .layout-region--node-main .layout-region__content{max-width: 100%; padding-left: 15px; padding-right: 15px;}
+  #block-claro-content .node-form[data-drupal-form-fields*="edit-gva-pagebuilder-content-0-value"]  .layout-region--node-main .layout-region__content{max-width: 100%; padding-left: 15px; padding-right: 15px;}
+
+  .page-node-type-page .node-form[data-drupal-form-fields*="edit-gva-pagebuilder-content-0-value"]  .layout-region--node-main {width: 100%; max-width: 100%; padding-left: 15px; padding-right: 15px;}
+  .page-node-type-service .node-form[data-drupal-form-fields*="edit-gva-pagebuilder-content-0-value"]  .layout-region--node-main {width: 100%; max-width: 100%; padding-left: 15px; padding-right: 15px;}
+
+  #block-claro-content .node-form[data-drupal-form-fields*="edit-gva-pagebuilder-content-0-value"]  .layout-region--node-main {width: 100%; max-width: 100%; padding-left: 15px; padding-right: 15px;}
+ */ 
+
 }
 
 .margin-top-40{margin-top: 42px!important;}
 
 .no-preview .gavias-image-demo{display: none!important;}
+
+.gpb-elements-list ul li a{
+  font-weight: 500;
+  color: #000;
+  font-size: 14px;
+  text-decoration: none;
+}
+.gpb-elements-list ul li a:hover{
+  text-decoration: underline;
+  color: #003ECC;
+}

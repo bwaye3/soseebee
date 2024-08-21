@@ -1,9 +1,23 @@
-<div class="gallery-popup--listing gallery-carousel-center owl-carousel">
-   {%- for item in items -%}
-      <div class="item">{{ item.content }}
-         <a href="{{file_url(item.content['#item'].entity.uri.value|image_style('large') )}}" class="image-popup" title="{{ item.content['#item'].title }}">
-            <i class="icon fas fa-expand"></i>
-         </a>
+{% if items|length > 2 %}
+   <div class="gallery-popup--listing gallery-carousel-center owl-carousel">
+      {%- for item in items -%}
+         <div class="item">{{ item.content }}
+            <a href="{{file_url(item.content['#item'].entity.uri.value|image_style('large') )}}" class="image-popup" title="{{ item.content['#item'].title }}">
+               <i class="icon fas fa-expand"></i>
+            </a>
+         </div>
+     {% endfor %}
+   </div>
+{% else %}
+   <div class="gallery-listing-full-grid">
+      <div class="lg-block-grid-{{items|length}} md-block-grid-{{items|length}} sm-block-grid-{{items|length}} xs-block-grid-{{items|length}}">
+         {%- for item in items -%}
+            <div class="item-columns">
+               <div class="image-content">
+                  <img src="{{file_url(item.content['#item'].entity.uri.value )}}" title="{{ item.content['#item'].title }}" />
+               </div>
+            </div>
+         {% endfor %}
       </div>
-  {% endfor %}
-</div> 
+   </div>   
+{% endif %}  

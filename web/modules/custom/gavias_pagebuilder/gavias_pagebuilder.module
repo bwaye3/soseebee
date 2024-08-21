@@ -10,10 +10,10 @@ use Drupal\node\NodeForm;
 
 define( 'GAVIAS_PAGE_BUILDER_PATH', \Drupal::service('extension.list.module')->getPath('gavias_pagebuilder') );
 
-module_load_include('php','gavias_pagebuilder', 'includes/core/model');
-module_load_include('php','gavias_pagebuilder', 'includes/define');
-module_load_include('php','gavias_pagebuilder', 'includes/utilities');
-module_load_include('php','gavias_pagebuilder', 'includes/frontend');
+\Drupal::moduleHandler()->loadInclude('gavias_pagebuilder','php', 'includes/core/model');
+\Drupal::moduleHandler()->loadInclude('gavias_pagebuilder','php', 'includes/define');
+\Drupal::moduleHandler()->loadInclude('gavias_pagebuilder','php', 'includes/utilities');
+\Drupal::moduleHandler()->loadInclude('gavias_pagebuilder','php', 'includes/frontend');
 
 function gavias_pagebuilder_theme_name(){
 	$default_theme = \Drupal::config('system.theme')->get('default');
@@ -170,9 +170,15 @@ function gavias_pagebuilder_form_node_form_alter(&$form, \Drupal\Core\Form\FormS
 
 			//print "<pre>";print_r($form['gva_pagebuilder_content']['widget']);
 			//print '<pre>'; print_r($form['gva_pagebuilder_content']); die();
+			$html_script = '<script src="'.base_path()  . \Drupal::service('extension.list.module')->getPath('gavias_pagebuilder') .'/assets/admin/js/app.min.js"></script>';
+			$form['gva_pagebuilder_html_script'] = array(
+				'#type' => 'markup',
+				'#markup' => \Drupal\Core\Render\Markup::create($html_script),
+				'#weight' => 96
+			);
 
 			$html_title_pagebuilder = '<div style="margin: 30px 0 30px;padding: 0 0 10px;border-bottom: 2px solid #ccc;">';
-				$html_title_pagebuilder .= '<span style="font-size: 18px; font-weight: 700;">Page Builder</span><a class="pagebuilder-enable-disable button button--primary">Disable Page Builder</a>';
+				$html_title_pagebuilder .= '<span style="display: block;font-size: 18px; font-weight: 700;">Page Builder</span><a class="pagebuilder-enable-disable button button--primary">Disable Page Builder</a>';
 			$html_title_pagebuilder .= '</div>';
 			$form['gva_pagebuilder_enable_markup'] = array(
 				'#type' => 'markup',
@@ -353,7 +359,8 @@ function gavias_pagebuilder_preprocess_node(&$variables){
 	}
 
 	$variables['content']['pagebuilder_content'] = array(
-		'#markup' => \Drupal\Core\Render\Markup::create($html)
+		'#markup' => \Drupal\Core\Render\Markup::create($html),
+		'#weight' => 399	
 	);
 }
 

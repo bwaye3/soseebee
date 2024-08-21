@@ -289,6 +289,8 @@ function gaviasthemer_form_block_form_alter(&$form, \Drupal\Core\Form\FormStateI
             $form_state->setValue('breadcrumb_background_image_tmp', '');
             $form_state->setErrorByName('breadcrumb_background_image_error', $this->t('The logo could not be uploaded.'));
           }
+        }else{
+          $form_state->setValue('breadcrumb_background_image_tmp', '');
         }
         $validators = array('file_validate_extensions' => array('ico png gif jpg jpeg apng svg'));
       }
@@ -309,6 +311,11 @@ function gaviasthemer_form_block_form_alter(&$form, \Drupal\Core\Form\FormStateI
           ->set('breadcrumb_background_image_path_' . $_id, gaviasthemer_validate_path($filename))
           ->save();
         }
+      }else{
+        $default_value = isset($values['third_party_settings']['gaviasthemer']['breadcrumb_background_image_path']) ? $values['third_party_settings']['gaviasthemer']['breadcrumb_background_image_path'] : '';
+        \Drupal::configFactory()->getEditable('gaviasthemer.settings')
+            ->set('breadcrumb_background_image_path_' . $_id, $default_value)
+            ->save();
       }
     }
   }    
@@ -337,9 +344,9 @@ function gaviasthemer_form_block_form_alter(&$form, \Drupal\Core\Form\FormStateI
  */
 function gaviasthemer_preprocess_block(&$variables) {
   // Blocks coming from page manager widget does not have id.
-  if (!empty($variables['elements']['#id'])) {
+  if (isset($variables['elements']['#id']) && !empty($variables['elements']['#id'])) {
     $block = Block::load($variables['elements']['#id']);
-    if ($classes = $block->getThirdPartySetting('gaviasthemer', 'classes')) {
+    if($block && $classes = $block->getThirdPartySetting('gaviasthemer', 'classes')) {
       $variables['attributes']['class'][] = $classes;
     }
   }

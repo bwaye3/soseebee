@@ -245,6 +245,8 @@ body.logged-in{
 				align-items: center;
 				justify-content: end;
 				.main-menu{
+					flex: 1;
+					flex: 0 0 100%;
 					&.has-header-button{
 						padding-right: 180px;
 					}

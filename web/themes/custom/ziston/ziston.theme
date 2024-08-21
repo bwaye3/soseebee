@@ -244,7 +244,7 @@ function ziston_preprocess_block__system_breadcrumb_block(&$variables){
 				$bg_repeat = $breadcrumb_background_repeat;
 			}
 			if($breadcrumb_background_image_path){
-				$bg_image = file_create_url($breadcrumb_background_image_path);
+				$bg_image = \Drupal::service('file_url_generator')->generateAbsoluteString($breadcrumb_background_image_path); 
 			}
 		}
 	}

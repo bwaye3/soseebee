@@ -3,6 +3,8 @@
   global $base_url;
 ?>
 
+<script src="<?php echo base_path()  . \Drupal::service('extension.list.module')->getPath('gavias_pagebuilder')  ?>/assets/admin/js/app.min.js"></script>
+
 <div id="gavias-pagebuider-wrap-settings">
    
    <div class="gbb-block-title">

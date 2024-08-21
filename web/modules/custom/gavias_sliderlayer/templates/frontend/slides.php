@@ -26,7 +26,7 @@ jQuery(document).ready(function($){
       fullScreenAutoWidth: "auto",
       fullScreenAlignForce: "off",
       fullScreenOffset: "0",
-      visibilityLevels:[1240,1240,778,480],
+      visibilityLevels:[1240,1024,778,480],
       <?php if($ss->reponsive){ ?>
         responsiveLevels:<?php print $ss->responsiveLevels ?>,
       <?php } ?>

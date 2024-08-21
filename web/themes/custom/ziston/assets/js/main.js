@@ -168,7 +168,7 @@
 			fixedContentPos: false
 		});
 
-		$('.gallery-popup, .preview-gallery').each(function(){
+		$('.gallery-popup, .preview-gallery, .gallery-popup--listing').each(function(){
 			$(this).magnificPopup({
 				delegate: 'a.image-popup', 
 				type: 'image',

@@ -49,7 +49,7 @@ if(!class_exists('element_gva_tabs')){
          );
          for($i=1; $i<=8; $i++){
             $fields['fields'][] = array(
-               'id'     => "info_${i}",
+               'id'     => "info_{$i}",
                'type'   => 'info',
                'desc'   => "Information for item {$i}"
             );
@@ -97,7 +97,7 @@ if(!class_exists('element_gva_tabs')){
                         $content = "content_{$i}";
                      ?>
                      <?php if($$title){ ?>
-                        <li><a <?php print($i==1?'class="active show"':'') ?> data-toggle="tab" href="#<?php print ($uid .'-'. $i) ?>">  <?php print $$title ?> </a></li>
+                        <li><a <?php print($i==1?'class="active show"':'') ?> data-bs-toggle="tab" href="#<?php print ($uid .'-'. $i) ?>">  <?php print $$title ?> </a></li>
                      <?php } ?>
                   <?php } ?>
                </ul>

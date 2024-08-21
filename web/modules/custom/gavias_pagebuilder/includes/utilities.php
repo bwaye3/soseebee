@@ -15,7 +15,7 @@ function gavias_pagebuilder_makeid($length = 5){
 
 if(!function_exists('gavias_content_builder_makeid')){
   function gavias_content_builder_makeid($length = 5){
-    $characters = '0123456789abcdefghijklmnopqrstuvwxyz';
+    $characters = 'abcdefghijklmnopqrstuvwxyz';
     $randomString = '';
     for ($i = 0; $i < $length; $i++) {
         $randomString .= $characters[rand(0, strlen($characters) - 1)];

@@ -457,7 +457,7 @@ base64Encode = function(r) {
       }
 
       if(_screen == '_sm'){
-        $('#gavias_slider_single').width(778).height($group_settings.gridheight_sm);
+        $('#gavias_slider_single').width(1024).height($group_settings.gridheight_sm);
         var __layer = 0;
         $('#gavias_slider_single > .layer').each(function(){
           $('#layer-' + __layer + ' .inner').css({

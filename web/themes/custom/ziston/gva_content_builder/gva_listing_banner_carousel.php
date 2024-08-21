@@ -53,7 +53,7 @@ if(!class_exists('element_gva_listing_banner_carousel')):
       
          for($i = 1; $i <= 5; $i++){
             $fields['fields'][] = array(
-               'id'     => "info_${i}",
+               'id'     => "info_{$i}",
                'type'   => 'info',
                'desc'   => "Information for item {$i}"
             );
@@ -87,7 +87,7 @@ if(!class_exists('element_gva_listing_banner_carousel')):
 
          for($i = 6; $i <= 10; $i++){
             $fields['fields'][] = array(
-               'id'     => "info_${i}",
+               'id'     => "info_{$i}",
                'type'   => 'info',
                'desc'   => "Information for item {$i}"
             );

@@ -9,7 +9,7 @@ gavias_pagebuilder.assets.admin:
   js:
     vendor/jquery-migrate.min.js: {}
     assets/admin/js/main.js: { scope: footer }
-    assets/admin/js/app.min.js: { scope: footer }
+    # assets/admin/js/app.min.js: { scope: footer }
   dependencies:
     - imce/drupal.imce.input
     - core/jquery
@@ -30,7 +30,7 @@ gavias_pagebuilder.assets.node:
     vendor/notify/notify.min.js: {}
     assets/admin/js/main.js: { scope: footer }
     assets/admin/js/node.js: { scope: footer }
-    assets/admin/js/app.min.js: { scope: footer }
+    # assets/admin/js/app.min.js: { scope: footer }
   dependencies:
     - imce/drupal.imce.input
     - core/jquery

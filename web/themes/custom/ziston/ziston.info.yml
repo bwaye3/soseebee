@@ -37,6 +37,6 @@ regions:
   listings_user: 'Listings of User'
   other: 'Other'
 
-version: '2.0.0'
+version: '2.0.4'
 core_version_requirement: ^8 || ^9 || ^10
 project: 'drupal'
