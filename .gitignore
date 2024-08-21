@@ -1,6 +1,6 @@
 # Ignore sensitive information
 /web/sites/*/settings.php
-
+web/sites/*/settings.php
 
 _sql
 # Place local settings in settings.local.php
